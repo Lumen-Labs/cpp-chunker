@@ -244,7 +244,7 @@ Advanced semantic text chunking class that preserves meaning and context.
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/Lumen-Labs/cpp-chunker.git)
 cd cpp_chunker
 
 # Install dependencies
