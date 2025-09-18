@@ -1,0 +1,20 @@
+[build-system]
+requires = [ "setuptools>=45", "wheel", "pybind11>=2.10.0",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpp-chunker"
+version = "0.1.1"
+description = "C++ chunker"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [ "pybind11>=2.10.0",]
+[[project.authors]]
+name = "Christian"
+email = "alch.infoemail@gmail.com"
+
+[project.license]
+text = "MIT"
+
+[tool.setuptools.packages.find]
+exclude = [ "pybind11*", "build*", "*.egg-info*",]
