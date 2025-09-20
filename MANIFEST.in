@@ -1,0 +1,4 @@
+include chunker/*.h
+include chunker/*.cpp
+include main.cpp
+include *.pyi
