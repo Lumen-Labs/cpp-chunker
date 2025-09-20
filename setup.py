@@ -34,16 +34,13 @@ ext_modules = [
     Extension(
         "chunker_cpp",
         ["main.cpp", "chunker/chunker.cpp"],
-        include_dirs=[pybind11_include],
+        include_dirs=[pybind11_include, "chunker"],
         language="c++",
         extra_compile_args=["-std=c++17"],
     ),
 ]
 
 setup(
-    name="cpp-chunker",
-    version="0.1.0",
-    description="C++ chunker",
     ext_modules=ext_modules,
     packages=find_packages(),
     py_modules=["chunker"],
@@ -51,21 +48,4 @@ setup(
         "": ["*.pyi"],
     },
     zip_safe=False,
-    install_requires=[
-        "pybind11>=2.10.0",
-    ],
-    python_requires=">=3.7",
-    classifiers=[
-        "Development Status :: 3 - Alpha",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
-        "Programming Language :: Python :: 3.12",
-        "Programming Language :: C++",
-    ],
 )
